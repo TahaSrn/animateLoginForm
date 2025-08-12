@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: yekan;
+    src: url("/src/assets/fonts/persianFont/yekan-font/yekan-regular.ttf");
+}
+*{
+    font-family: yekan;
+}
+input{
+    font-family: inherit;
+}
+input:focus {
+    outline: none;
+}
+
+@layer components{
+    .btn{
+        @apply w-11/12 h-1/2 font-bold border bg-blue-500 text-white text-2xl rounded-lg
+        hover:bg-blue-700 transition-all duration-500
+    }
+}
+
+@keyframes changeColor {
+    0% {
+      /* background: linear-gradient(45deg, red, black); */
+      background-position: 0% 50%
+    }
+  
+    100% {
+      /* background: linear-gradient(45deg, black, red); */
+      background-position: 100% 50%;
+  
+    }
+}
+
+@keyframes fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@layer utilities {
+    .animate-fade-in {
+      @apply opacity-0 animate-[fadein_1s_ease-in-out_forwards];
+    }
+    
+    .animate-color {
+      @apply transition-all animate-[changeColor_1s_linear_infinite_alternate]
+    }
+}
