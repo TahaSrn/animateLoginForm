@@ -16,7 +16,7 @@ input:focus {
 
 @layer components{
     .btn{
-        @apply w-11/12 h-1/2 font-bold border bg-blue-500 text-white text-2xl rounded-lg
+        @apply w-11/12 h-1/2 font-bold border bg-blue-500 text-white text-[3vw] md:text-[1.5vw] rounded-lg
         hover:bg-blue-700 transition-all duration-500
     }
 }
